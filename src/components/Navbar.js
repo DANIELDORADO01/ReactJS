@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {FaBars} from 'react-icons/fa'; 
 import Logo from '../assets/logo2.png';
 
+
+
 const Navbar = () => {
   const[nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
@@ -13,8 +15,15 @@ const Navbar = () => {
 
 
       <ul className='hidden md:flex'>
-        <li>About Me</li>
-        <li>Skills</li>
+      <li>
+          <a href='/'>Home</a>
+        </li>
+        <li>
+        <a href='/about'>About</a>
+        </li>
+        <li>
+        <a href='/skills'>Skills</a>
+        </li>
       </ul>
 
 
@@ -23,11 +32,21 @@ const Navbar = () => {
       </div>
 
       <ul className={!nav ? 'hidden' : 'absolute top-0 w-full h-screen bg-blue-500 flex flex-col justify-center items-center'}>
-      <li className='py-6 text-4xl'>About Me</li>
-      <li className='py-6 text-4xl'>Skills</li>
+      <li className='py-6 text-4xl'>
+      <a href='/'>Home</a>
+        </li>
+        <li className='py-6 text-4xl'>
+          
+          <a href='/About'>About</a>
+        </li>
+        <li className='py-6 text-4xl'>
+          
+          <a href='/Skills'>Skills</a>
+        </li>
       </ul>
 
       <div className='hidden'></div>
+
     </div>
   )
 }
